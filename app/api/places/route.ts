@@ -1,5 +1,6 @@
 export const getPlaces = async () => {
   try {
+    // todo - extract out fetch to a helper function that includes api key on every request
     const res = await fetch(
       "https://places.googleapis.com/v1/places:searchText",
       {
