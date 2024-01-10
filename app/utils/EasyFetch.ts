@@ -37,14 +37,14 @@ export const postData = <T>(
   url: string,
   payload: Object,
   customHeaders?: CustomHeader,
-): Promise<T> => fetchWrapper("POST", url, payload);
+): Promise<T> => fetchWrapper("POST", url, payload, customHeaders);
 export const putData = <T>(
   url: string,
   payload: Object,
   customHeaders?: CustomHeader,
-): Promise<T> => fetchWrapper("PUT", url, payload);
+): Promise<T> => fetchWrapper("PUT", url, payload, customHeaders);
 export const deleteData = <T>(
   url: string,
   payload: Object = {},
   customHeaders?: CustomHeader,
-): Promise<T> => fetchWrapper("DELETE", url, payload);
+): Promise<T> => fetchWrapper("DELETE", url, payload, customHeaders);

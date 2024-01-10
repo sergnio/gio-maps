@@ -3,9 +3,9 @@ import { postData } from "@/app/utils/EasyFetch";
 /**
  *  This is a function that gets places from the Google Places API
  */
-export const getPlaces = async () => {
+export const getPlaces = async (): Promise<Place[]> => {
   try {
-    return await postData<any>(
+    return await postData<Place[]>(
       "https://places.googleapis.com/v1/places:searchText",
       {
         textQuery: "Pizza places near Livefront, Minneapolis, Minnesota",
@@ -15,5 +15,6 @@ export const getPlaces = async () => {
     );
   } catch (e) {
     console.log(JSON.stringify(e));
+    throw new Error("Failed to get places");
   }
 };
