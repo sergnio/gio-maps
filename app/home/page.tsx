@@ -1,16 +1,19 @@
-import { getPlaces } from "../api/places/route";
-
+import { getPlaces } from "@/app/api/places/route";
 export default async function HomePage() {
-  // const places: any = await getPlaces();
-  const places: string[] = ["place1", "place2", "place3"];
+  const places = await getPlaces();
+
+  // useEffect(() => {
+  //   getPlaces().then((res) => console.log("res", res));
+  // });
+  console.log("places", places);
 
   return (
     <>
       <h1>Home</h1>
       {/*@ts-ignore*/}
-      {places.map((place, index) => (
-        <div key={`${place}-${index}`}>{JSON.stringify(place)}</div>
-      ))}
+      {/*{places.map((place, index) => (*/}
+      {/*  <div key={`${place}-${index}`}>{JSON.stringify(place)}</div>*/}
+      {/*))}*/}
     </>
   );
 }
