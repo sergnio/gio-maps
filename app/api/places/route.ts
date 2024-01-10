@@ -1,3 +1,4 @@
 export const getPlaces = async () => {
-    // get list of places
-}
+  return [];
+  // get list of places
+};

@@ -6,7 +6,7 @@ export default async function HomePage() {
 
   return (
     <>
-      <h1>displays a list of things</h1>
+      <h1>Home</h1>
       {/*@ts-ignore*/}
       {places.map((place) => (
         <div key={place.id}>{JSON.stringify(place)}</div>
