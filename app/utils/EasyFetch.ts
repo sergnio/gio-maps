@@ -1,20 +1,23 @@
+type CustomHeader = { [key: string]: string };
 const fetchWrapper = async <T>(
   method: string,
   url: string,
   payload?: Object,
+  customHeaders?: CustomHeader, // Add custom headers parameter
 ): Promise<T> => {
+  // if this were a ~truly~ generic function, we'd want to pass in the api key instead, or have it be a config option of some sort
   const googlePlacesApiKey = process.env.GOOGLE_PLACES_API_KEY;
   if (!googlePlacesApiKey) {
-    throw new Error("No googlePlacesApiKey was provided! Cannot run quries.");
+    throw new Error("No googlePlacesApiKey was provided! Cannot run queries.");
   }
 
+  const defaultHeaders = {
+    "Content-Type": "application/json",
+    "X-Goog-Api-Key": `${googlePlacesApiKey}`,
+  };
   const options: RequestInit = {
     method,
-    headers: {
-      "Content-Type": "application/json",
-      "X-Goog-Api-Key": `${googlePlacesApiKey}`,
-      "X-Goog-FieldMask": "places.displayName,places.formattedAddress",
-    },
+    headers: { ...defaultHeaders, ...customHeaders },
     ...(payload && { body: JSON.stringify(payload) }),
   };
 
@@ -30,9 +33,18 @@ const fetchWrapper = async <T>(
 
 export const fetchData = <T>(url: string, payload?: Object): Promise<T> =>
   fetchWrapper("GET", url, payload);
-export const postData = <T>(url: string, payload: Object): Promise<T> =>
-  fetchWrapper("POST", url, payload);
-export const putData = <T>(url: string, payload: Object): Promise<T> =>
-  fetchWrapper("PUT", url, payload);
-export const deleteData = <T>(url: string, payload: Object = {}): Promise<T> =>
-  fetchWrapper("DELETE", url, payload);
+export const postData = <T>(
+  url: string,
+  payload: Object,
+  customHeaders?: CustomHeader,
+): Promise<T> => fetchWrapper("POST", url, payload);
+export const putData = <T>(
+  url: string,
+  payload: Object,
+  customHeaders?: CustomHeader,
+): Promise<T> => fetchWrapper("PUT", url, payload);
+export const deleteData = <T>(
+  url: string,
+  payload: Object = {},
+  customHeaders?: CustomHeader,
+): Promise<T> => fetchWrapper("DELETE", url, payload);
