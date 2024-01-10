@@ -1,20 +1,18 @@
 // eslint-disable-next-line react/display-name
-import {getPlaces} from "@/app/api/places/route";
+import { getPlaces } from "@/app/api/places/route";
 
 export default async function HomePage() {
-  const places: any = await getPlaces()
+  const places: any = await getPlaces();
 
-    return (
-        <>
-          <h1>displays a list of things</h1>
-        {/*@ts-ignore*/}
-          {places.map((place) => (
-            <div key={place.id}>
-                {JSON.stringify(place)}
-            </div>
-          ))}
-        </>
-    )
+  return (
+    <>
+      <h1>displays a list of things</h1>
+      {/*@ts-ignore*/}
+      {places.map((place) => (
+        <div key={place.id}>{JSON.stringify(place)}</div>
+      ))}
+    </>
+  );
 }
 
 /*
