@@ -1,11 +1,12 @@
 import { postData } from "@/app/utils/EasyFetch";
+import { NextResponse } from "next/server";
 
 /**
  *  This is a function that gets places from the Google Places API
  */
 export const getPlaces = async (): Promise<Place[]> => {
   try {
-    return await postData<Place[]>(
+    const response = await postData<GetPlacesListResponse>(
       "https://places.googleapis.com/v1/places:searchText",
       {
         textQuery: "Pizza places near Livefront, Minneapolis, Minnesota",
@@ -13,6 +14,7 @@ export const getPlaces = async (): Promise<Place[]> => {
       },
       { "X-Goog-FieldMask": "places.displayName,places.formattedAddress" },
     );
+    return response.places;
   } catch (e) {
     console.log(JSON.stringify(e));
     throw new Error("Failed to get places");

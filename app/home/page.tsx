@@ -2,7 +2,7 @@ import { getPlaces } from "@/app/api/places/route";
 export default async function HomePage() {
   const places = await getPlaces();
 
-  console.log("places", JSON.stringify(places));
+  console.log(places);
 
   return (
     <>
