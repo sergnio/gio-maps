@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import styles from "./StarRating.module.css";
 
 interface Props {
@@ -9,7 +9,7 @@ interface Props {
 // eslint-disable-next-line import/no-anonymous-default-export, react/display-name
 export default ({ rating }: Props) => {
   const totalStars = 5;
-  let stars = [];
+  let stars: ReactElement[] = [];
 
   for (let i = 1; i <= totalStars; i++) {
     if (i <= rating) {
@@ -27,5 +27,12 @@ export default ({ rating }: Props) => {
     }
   }
 
-  return <div className={styles.starRating}>{stars}</div>;
+  return (
+    <div
+      className={styles.starRating}
+      aria-label={`Rated ${rating} out of 5 stars`}
+    >
+      {stars}
+    </div>
+  );
 };
