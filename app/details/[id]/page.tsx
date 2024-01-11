@@ -1,7 +1,5 @@
-import { GetServerSideProps } from "next";
-import { getPlaces } from "@/app/api/places/route";
-import { getPlace } from "@/app/api/places/[id]/route";
 import StarRating from "@/app/components/StarRating/StarRating";
+import { getPlace } from "@/app/lib/getPlace";
 
 interface Props {
   params: {
@@ -9,13 +7,12 @@ interface Props {
   };
 }
 
-export default async function PlaceDetail({ params: { id } }: any) {
+export default async function PlaceDetail({ params: { id } }: Props) {
   const {
     rating,
     userRatingCount,
     displayName: { text },
   } = await getPlace({ placeId: id });
-  // const text = "place name";
 
   return (
     <div>

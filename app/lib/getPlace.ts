@@ -1,3 +1,4 @@
+"use server";
 import { fetchData } from "@/app/utils/EasyFetch";
 import { GetPlaceDetailResponse, PlaceDetail } from "@/app/types/PlaceDetail";
 
