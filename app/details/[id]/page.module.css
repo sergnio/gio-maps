@@ -1,4 +1,4 @@
-.ratingBox {
+.ratingContainer {
     display: flex;
     align-items: center;
     gap: .5em;
@@ -13,7 +13,11 @@
     color: hsl(0, 0%, 50%);
 }
 
-.container {
-    display: flex;
-    flex-direction: row;
+.contentContainer {
+/*    there will be only two components, they should be side by side if*/
+}
+
+.reviewContainer {
+    max-height: 50vh;
+    overflow-y: scroll;
 }

@@ -1,6 +1,7 @@
 import StarRating from "@/app/components/StarRating/StarRating";
 import { getPlace } from "@/app/lib/getPlace";
 import styles from "./page.module.css";
+import Reviews from "@/app/components/Reviews/Reviews";
 
 interface Props {
   params: {
@@ -14,14 +15,15 @@ export default async function PlaceDetail({ params: { id } }: Props) {
     userRatingCount,
     displayName: { text },
     formattedAddress,
+    reviews,
   } = await getPlace({ placeId: id });
 
   return (
     <>
       <h1>{text}</h1>
-      <div className={styles.container}>
+      <div className={styles.contentContainer}>
         <div>
-          <div className={styles.ratingBox}>
+          <div className={styles.ratingContainer}>
             <p className={styles.ratingText}>{rating}</p>
             <StarRating rating={rating} />
             <p className={styles.ratingCount}>({userRatingCount})</p>
@@ -30,10 +32,13 @@ export default async function PlaceDetail({ params: { id } }: Props) {
             Address: {formattedAddress}
           </p>
           <div>
-            <h2>reviews</h2>
-            <div>review box</div>
+            <h1>Reviews!</h1>
+            <div className={styles.reviewContainer}>
+              <Reviews reviews={reviews} />
+            </div>
           </div>
         </div>
+
         <div>image container</div>
       </div>
     </>

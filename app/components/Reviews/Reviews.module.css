@@ -1,0 +1,10 @@
+.contentContainer {
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  padding: 1em;
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 5px;
+  background-color: hsl(0, 0%, 95%);
+}

@@ -11,7 +11,7 @@ export type PlaceDetail = {
   displayName: TextWithLanguage;
 };
 
-type Review = {
+export type Review = {
   name: string;
   relativePublishTimeDescription: string;
   rating: number;

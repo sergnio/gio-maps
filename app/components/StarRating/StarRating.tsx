@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import styles from "./StarRating.module.css";
+import Star from "@/app/components/StarRating/Star";
 
 interface Props {
   rating: number;
@@ -12,19 +13,8 @@ export default ({ rating }: Props) => {
   let stars: ReactElement[] = [];
 
   for (let i = 1; i <= totalStars; i++) {
-    if (i <= rating) {
-      stars.push(
-        <span key={i} className={styles.fullStar}>
-          ★
-        </span>,
-      );
-    } else {
-      stars.push(
-        <span key={i} className={styles.emptyStar}>
-          ☆
-        </span>,
-      );
-    }
+    // continue to add filled stars until we reach the rating, then have blank stars
+    stars.push(<Star filled={i <= rating} />);
   }
 
   return (
