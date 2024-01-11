@@ -5,10 +5,16 @@ export type GetPlaceDetailResponse = PlaceDetail;
 export type PlaceDetail = {
   id: string;
   formattedAddress: string;
+  location: Location;
   rating: number;
   userRatingCount: number;
   reviews: Review[];
   displayName: TextWithLanguage;
+};
+
+export type Location = {
+  latitude: number;
+  longitude: number;
 };
 
 export type Review = {

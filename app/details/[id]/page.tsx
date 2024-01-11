@@ -2,6 +2,7 @@ import StarRating from "@/app/components/StarRating/StarRating";
 import { getPlace } from "@/app/lib/getPlace";
 import styles from "./page.module.css";
 import Reviews from "@/app/components/Reviews/Reviews";
+import GoogleMapEmbed from "@/app/components/GoogleMapEmbed/GoogleMapEmbed";
 
 interface Props {
   params: {
@@ -16,6 +17,7 @@ export default async function PlaceDetail({ params: { id } }: Props) {
     displayName: { text },
     formattedAddress,
     reviews,
+    location,
   } = await getPlace({ placeId: id });
 
   return (
@@ -39,7 +41,9 @@ export default async function PlaceDetail({ params: { id } }: Props) {
           </div>
         </div>
 
-        <div>image container</div>
+        <div>
+          <GoogleMapEmbed location={location} />
+        </div>
       </div>
     </>
   );
