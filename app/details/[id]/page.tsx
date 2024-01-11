@@ -30,19 +30,18 @@ export default async function PlaceDetail({ params: { id } }: Props) {
             <StarRating rating={rating} />
             <p className={styles.ratingCount}>({userRatingCount})</p>
           </div>
-          <p aria-label={`Address: ${formattedAddress}`}>
-            Address: {formattedAddress}
-          </p>
+          <GoogleMapEmbed location={location} />
+          <h3 aria-label={`Address: ${formattedAddress}`}>
+            {formattedAddress}
+          </h3>
+        </div>
+        <div>
           <div>
-            <h1>Reviews!</h1>
+            <h2>Reviews</h2>
             <div className={styles.reviewContainer}>
               <Reviews reviews={reviews} />
             </div>
           </div>
-        </div>
-
-        <div>
-          <GoogleMapEmbed location={location} />
         </div>
       </div>
     </>

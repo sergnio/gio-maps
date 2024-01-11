@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header>
+        <header className={styles.header}>
           <Link href={HOME_PAGE_ROUTE}>
             <h1 aria-label="Giomaps, navigate home">Giomaps</h1>
           </Link>

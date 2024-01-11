@@ -1,6 +1,7 @@
 .ratingContainer {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: .5em;
 }
 
@@ -15,6 +16,8 @@
 
 .contentContainer {
 /*    there will be only two components, they should be side by side if*/
+    display: flex;
+    flex-direction: row;
 }
 
 .reviewContainer {

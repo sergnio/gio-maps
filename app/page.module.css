@@ -13,9 +13,35 @@
 }
 
 .listItem {
+  position: relative;
   list-style-type: none;
   margin: 1rem;
-  padding: 0;
+  /* Give a bit of padding for the arrow at the end of the element */
+  padding: .5em 2em .5em .5em;
+  border-radius: 1em;
+}
+
+.listItem:hover::after,
+.listItem:focus::after {
+  content: "→";
+  position: absolute;
+  right: 0.5em;
+}
+
+.listItem:hover,
+.listItem:focus {
+  /*add transition*/
+    transition: all 0.2s ease-in-out;
+  background-color: hsl(0, 0%, 94%); /* Highlight color on hover/focus */
+  outline: none; /* Remove default focus outline */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+  justify-content: center;
+    margin-block: 1em;
+
 }
 
 .description {
