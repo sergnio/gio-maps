@@ -14,7 +14,7 @@ export const getPlace = async ({ placeId }: Props): Promise<PlaceDetail> => {
       url: `https://places.googleapis.com/v1/places/${placeId}?language_code=en`,
       customHeaders: {
         "X-Goog-FieldMask":
-          "id,displayName,rating,userRatingCount,formattedAddress,reviews",
+          "id,photos,displayName,rating,userRatingCount,formattedAddress,reviews",
       },
     });
     console.log("detailResponse: ", JSON.stringify(detailResponse, null, 4));
