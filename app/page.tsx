@@ -8,13 +8,19 @@ export default async function Home() {
 
   console.log(places);
   return (
-    <main>
-      <h1>Home</h1>
-      {places.map((place, index) => (
-        <Link key={`${place.id}`} href={DETAILS_PAGE_ROUTE(place.id)}>
-          <div className={styles.list}>{JSON.stringify(place)}</div>
-        </Link>
-      ))}
-    </main>
+    <>
+      <h1>Giomaps</h1>
+      {places.length > 0 ? (
+        <ul>
+          {places.map(({ id, displayName: { text } }, index) => (
+            <Link key={`${id}`} href={DETAILS_PAGE_ROUTE(id)}>
+              <li className={styles.listItem}>{text}</li>
+            </Link>
+          ))}
+        </ul>
+      ) : (
+        <div>No places found!</div>
+      )}
+    </>
   );
 }
