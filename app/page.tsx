@@ -1,12 +1,19 @@
-import HomePage from "@/app/home/page";
+import Link from "next/link";
+import styles from "@/app/page.module.css";
+import { getPlaces } from "@/app/api/places/route";
 
-export default function Home() {
+export default async function Home() {
+  const places = await getPlaces();
+
+  console.log(places);
   return (
     <main>
-      {/*if auth go here*/}
-      <HomePage />
-      {/*  otherwise go login*/}
-      {/*  todo - login component*/}
+      <h1>Home</h1>
+      {places.map((place, index) => (
+        <Link key={`${place.displayName}-${index}`} href={`${index}`}>
+          <div className={styles.list}>{JSON.stringify(place)}</div>
+        </Link>
+      ))}
     </main>
   );
 }
