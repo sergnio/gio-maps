@@ -1,4 +1,4 @@
-import StarRating from "@/app/components/StarRating/StarRating";
+import StarRating from "@/app/components/PizzaRating/PizzaRating";
 import { getPlace } from "@/app/lib/getPlace";
 import styles from "./page.module.css";
 import Reviews from "@/app/components/Reviews/Reviews";
@@ -34,6 +34,7 @@ export default async function PlaceDetail({ params: { id } }: Props) {
           <h3 aria-label={`Address: ${formattedAddress}`}>
             {formattedAddress}
           </h3>
+          <p>link to website</p>
         </div>
         <div>
           <div>

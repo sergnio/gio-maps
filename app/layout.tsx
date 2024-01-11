@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <header className={styles.header}>
           <Link href={HOME_PAGE_ROUTE}>
-            <h1 aria-label="Giomaps, navigate home">Giomaps</h1>
+            <h1 aria-label="GioMaps, navigate home">GioMaps</h1>
           </Link>
         </header>
         <main className={styles.main}>{children}</main>

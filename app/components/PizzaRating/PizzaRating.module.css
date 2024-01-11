@@ -1,0 +1,14 @@
+.rating {
+  font-size: 24px;
+  color: gold;
+}
+
+.fullPizza {
+  /*  aka do nothing! */
+  filter: grayscale(0);
+}
+
+.emptyPizza {
+    filter: grayscale(1);
+}
+

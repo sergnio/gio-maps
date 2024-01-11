@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
-import styles from "./StarRating.module.css";
-import Star from "@/app/components/StarRating/Star";
+import styles from "@/app/components/PizzaRating/PizzaRating.module.css";
+import Star from "@/app/components/PizzaRating/PizzaStar";
 
 interface Props {
   rating: number;

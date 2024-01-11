@@ -21,6 +21,6 @@
 }
 
 .reviewContainer {
-    max-height: 50vh;
-    overflow-y: scroll;
+    /*max-height: 50vh;*/
+    /*overflow-y: scroll;*/
 }
