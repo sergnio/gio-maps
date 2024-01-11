@@ -1,15 +1,14 @@
-// export a default type
-type GetPlacesListResponse = {
+export type GetPlacesListResponse = {
   places: Place[];
 };
 
-type Place = {
+export type Place = {
   id: string;
   displayName: DisplayName;
   formattedAddress: string;
 };
 
-type DisplayName = {
+export type DisplayName = {
   text: string;
   languageCode: string;
 };

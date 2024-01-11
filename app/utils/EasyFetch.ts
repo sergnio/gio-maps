@@ -8,7 +8,9 @@ const fetchWrapper = async <T>(
   // if this were a ~truly~ generic function, we'd want to pass in the api key instead, or have it be a config option of some sort
   const googlePlacesApiKey = process.env.GOOGLE_PLACES_API_KEY;
   if (!googlePlacesApiKey) {
-    throw new Error("No googlePlacesApiKey was provided! Cannot run queries.");
+    throw new Error(
+      "No googlePlacesApiKey was provided! Cannot run any fetch requests.",
+    );
   }
 
   const defaultHeaders = {
@@ -17,9 +19,16 @@ const fetchWrapper = async <T>(
   };
   const options: RequestInit = {
     method,
-    headers: { ...defaultHeaders, ...customHeaders },
+    // revalidate every at most every hour
+    next: { revalidate: 3600 },
+    headers: {
+      ...defaultHeaders,
+      ...customHeaders,
+    },
     ...(payload && { body: JSON.stringify(payload) }),
   };
+
+  console.log("options: ", options);
 
   try {
     const response = await fetch(url, options);
@@ -30,9 +39,17 @@ const fetchWrapper = async <T>(
     throw new Error(JSON.stringify(e));
   }
 };
-
-export const fetchData = <T>(url: string, payload?: Object): Promise<T> =>
-  fetchWrapper("GET", url, payload);
+interface FetchDataProps {
+  url: string;
+  payload?: Object;
+  customHeaders?: CustomHeader;
+}
+export const fetchData = <T>({
+  url,
+  payload,
+  customHeaders,
+}: FetchDataProps): Promise<T> =>
+  fetchWrapper("GET", url, payload, customHeaders);
 export const postData = <T>(
   url: string,
   payload: Object,

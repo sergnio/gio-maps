@@ -1,5 +1,6 @@
 import { GetServerSideProps } from "next";
 import { getPlaces } from "@/app/api/places/route";
+import { getPlace } from "@/app/api/places/[id]/route";
 
 interface Props {
   params: {
@@ -7,14 +8,13 @@ interface Props {
   };
 }
 
-const getStaticProps = async () => {
-  const places: Place[] = await getPlaces();
+export default async function PlaceDetail({ params: { id } }: any) {
+  // export default async function PlaceDetail(props: any) {
+  // console.log("props", props);
 
-  return places.map(({ id }) => ({
-    id,
-  }));
-};
+  const place = await getPlace({ placeId: id });
+  console.log("place", place);
 
-export default async function PlaceDetail({ params: { id } }: Props) {
+  // return <div>id: {props.params.id}</div>;
   return <div>id: {id}</div>;
 }

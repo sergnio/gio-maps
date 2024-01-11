@@ -1,4 +1,5 @@
 import { postData } from "@/app/utils/EasyFetch";
+import { GetPlacesListResponse, Place } from "@/app/types/Place";
 
 /**
  *  This is a function that gets places from the Google Places API
