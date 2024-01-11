@@ -12,9 +12,10 @@ export default async function PlaceDetail({ params: { id } }: any) {
   // export default async function PlaceDetail(props: any) {
   // console.log("props", props);
 
-  const place = await getPlace({ placeId: id });
-  console.log("place", place);
+  const {
+    displayName: { text },
+  } = await getPlace({ placeId: id });
 
   // return <div>id: {props.params.id}</div>;
-  return <div>id: {id}</div>;
+  return <div>name: {text}</div>;
 }

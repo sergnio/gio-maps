@@ -10,12 +10,13 @@ interface Props {
 
 export const getPlace = async ({ placeId }: Props): Promise<PlaceDetail> => {
   try {
-    return await fetchData<GetPlaceDetailResponse>({
+    const detailResponse = await fetchData<GetPlaceDetailResponse>({
       url: `https://places.googleapis.com/v1/places/${placeId}?language_code=en`,
       customHeaders: {
         "X-Goog-FieldMask": "id,displayName",
       },
     });
+    return detailResponse;
   } catch (e) {
     console.error(JSON.stringify(e));
     throw new Error("Failed to get places");

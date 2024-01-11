@@ -1,4 +1,4 @@
-import { DisplayName } from "@/app/__tests__/types/Place";
+import { DisplayName } from "@/app/types/Place";
 
 export type GetPlaceDetailResponse = PlaceDetail;
 
