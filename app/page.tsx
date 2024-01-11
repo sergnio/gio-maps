@@ -6,7 +6,6 @@ import { DETAILS_PAGE_ROUTE } from "@/app/clientRoutes";
 export default async function Home() {
   const places = await getPlaces();
 
-  console.log(places);
   return (
     <>
       <h1>Giomaps</h1>
