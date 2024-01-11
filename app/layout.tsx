@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import styles from "@/app/page.module.css";
+import Link from "next/link";
+import { HOME_PAGE_ROUTE } from "@/app/clientRoutes";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <header>
+          <Link href={HOME_PAGE_ROUTE}>This is a header</Link>
+        </header>
         <main className={styles.main}>{children}</main>
       </body>
     </html>
