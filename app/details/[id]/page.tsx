@@ -1,3 +1,4 @@
+import { GetServerSideProps } from "next";
 import { getPlaces } from "@/app/api/places/route";
 
 interface Props {
@@ -6,7 +7,7 @@ interface Props {
   };
 }
 
-export const generateStaticParams = async () => {
+const getStaticProps = async () => {
   const places: Place[] = await getPlaces();
 
   return places.map(({ id }) => ({
