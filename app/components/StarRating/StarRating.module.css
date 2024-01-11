@@ -1,0 +1,12 @@
+.rating {
+    font-size: 24px;
+    color: gold;
+}
+
+.fullStar {
+    color: gold;
+}
+
+.emptyStar {
+    color: lightgray;
+}
