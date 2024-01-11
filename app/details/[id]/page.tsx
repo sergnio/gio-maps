@@ -9,11 +9,11 @@ interface Props {
 export const generateStaticParams = async () => {
   const places: Place[] = await getPlaces();
 
-  return places.map((post) => ({
-    id: post.id,
+  return places.map(({ id }) => ({
+    id,
   }));
 };
 
 export default async function PlaceDetail({ params: { id } }: Props) {
-  return <h1>PlaceDetail</h1>;
+  return <div>id: {id}</div>;
 }

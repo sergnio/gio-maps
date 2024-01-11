@@ -1,2 +1,2 @@
 export const HOME_PAGE_ROUTE = "/";
-export const ABOUT_PAGE_ROUTE = "/about";
+export const DETAILS_PAGE_ROUTE = (id: string) => `/details/${id}`;

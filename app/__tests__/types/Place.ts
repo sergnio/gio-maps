@@ -4,6 +4,7 @@ type GetPlacesListResponse = {
 };
 
 type Place = {
+  id: string;
   displayName: DisplayName;
   formattedAddress: string;
 };
