@@ -4,11 +4,11 @@ export type GetPlacesListResponse = {
 
 export type Place = {
   id: string;
-  displayName: DisplayName;
+  displayName: TextWithLanguage;
   formattedAddress: string;
 };
 
-export type DisplayName = {
+export type TextWithLanguage = {
   text: string;
   languageCode: string;
 };

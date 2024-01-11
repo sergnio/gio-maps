@@ -13,9 +13,11 @@ export const getPlace = async ({ placeId }: Props): Promise<PlaceDetail> => {
     const detailResponse = await fetchData<GetPlaceDetailResponse>({
       url: `https://places.googleapis.com/v1/places/${placeId}?language_code=en`,
       customHeaders: {
-        "X-Goog-FieldMask": "id,displayName",
+        "X-Goog-FieldMask":
+          "id,displayName,rating,userRatingCount,formattedAddress,reviews",
       },
     });
+    console.log("detailResponse: ", JSON.stringify(detailResponse, null, 4));
     return detailResponse;
   } catch (e) {
     console.error(JSON.stringify(e));

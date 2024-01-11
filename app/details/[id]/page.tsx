@@ -9,13 +9,23 @@ interface Props {
 }
 
 export default async function PlaceDetail({ params: { id } }: any) {
-  // export default async function PlaceDetail(props: any) {
-  // console.log("props", props);
-
   const {
     displayName: { text },
   } = await getPlace({ placeId: id });
 
-  // return <div>id: {props.params.id}</div>;
-  return <div>name: {text}</div>;
+  return (
+    <div>
+      {/*flex col*/}
+      <div>
+        <h1>{text}</h1>
+        <p>rating, review count</p>
+        <p>distance, address</p>
+        <div>
+          <h2>reviews</h2>
+          <div>review box</div>
+        </div>
+      </div>
+      <div>image container</div>
+    </div>
+  );
 }
