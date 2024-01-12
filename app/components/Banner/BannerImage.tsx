@@ -2,8 +2,8 @@ import Image from "next/image";
 import PizzaBanner from "@/public/static/images/pizza.webp";
 
 export default () => {
-  const height = 500;
-  const width = height * 0.9;
+  const height = 600;
+  const width = height * 0.33;
 
   return (
     <Image
