@@ -3,6 +3,8 @@ import { getPlace } from "@/app/lib/getPlace";
 import styles from "./page.module.css";
 import Reviews from "@/app/components/Reviews/Reviews";
 import GoogleMapEmbed from "@/app/components/GoogleMapEmbed/GoogleMapEmbed";
+import type { Metadata } from "next";
+import Head from "next/head";
 
 interface Props {
   params: {
@@ -22,6 +24,14 @@ export default async function PlaceDetail({ params: { id } }: Props) {
 
   return (
     <>
+      <Head>
+        <title>{text} - Pizza Finder</title>
+        <meta
+          name="description"
+          content={`Find out more about ${text}, a top-rated pizza place.`}
+        />
+      </Head>
+
       <h1>{text}</h1>
       <div className={styles.contentContainer}>
         <div>
