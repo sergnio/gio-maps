@@ -8,7 +8,9 @@ export default async function Home() {
   const places = await getPlaces();
   return (
     <div className={styles.homeContainer}>
-      <BannerImage />
+      <div className={styles.bannerContainer}>
+        <BannerImage />
+      </div>
       <section className={styles.listContainer}>
         {places.length > 0 ? (
           <ul>

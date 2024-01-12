@@ -50,9 +50,11 @@
 }
 
 .bannerContainer {
-  /*position: absolute;*/
-  /*left: 0;*/
   background: blue;
+
+  @media (max-width: 575px) {
+    display: none;
+  }
 }
 
 .listContainer {
