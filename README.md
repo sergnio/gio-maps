@@ -11,8 +11,9 @@ The command should be similar to this:
 $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/vXX.XX.XX/install.sh | bash
 ```
 
-Once NVM has been installed, run these set of commands to ensure you're on the matching
-npm version
+Once NVM has been installed, please restart your terminal.
+
+After terminal restarte, run these set of commands to ensure you're on the matching npm version
 
 ```
 cd gio-maps
