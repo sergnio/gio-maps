@@ -10,5 +10,4 @@ export default defineConfig({
     alias: { "@/": new URL("@", import.meta.url).pathname },
     exclude: ["**/node_modules/**", "**/e2e-tests/**"],
   },
-  base: ".",
 });
