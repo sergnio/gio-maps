@@ -14,7 +14,7 @@ export const getPlaces = async (): Promise<Place[]> => {
       },
       {
         "X-Goog-FieldMask":
-          "places.id,places.displayName,places.formattedAddress",
+          "places.id,places.displayName,places.formattedAddress,places.rating,places.userRatingCount",
       },
     );
     return response.places;
