@@ -1,26 +1,34 @@
 .ratingContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: .5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
 }
 
 .ratingText {
+  @media (prefers-color-scheme: dark) {
     color: hsl(0, 0%, 95%);
-    font-weight: bold;
+  }
+
+  color: hsl(0, 0%, 25%);
+  font-weight: bold;
 }
 
 .ratingCount {
-    color: hsl(0, 0%, 80%);
+  @media (prefers-color-scheme: dark) {
+    color: hsl(0, 0%, 95%);
+  }
+
+  color: hsl(0, 0%, 25%);
 }
 
 .contentContainer {
-/*    there will be only two components, they should be side by side if*/
-    display: flex;
-    flex-direction: row;
+  /*    there will be only two components, they should be side by side if*/
+  display: flex;
+  flex-direction: row;
 }
 
 .reviewContainer {
-    /*max-height: 50vh;*/
-    /*overflow-y: scroll;*/
+  /*max-height: 50vh;*/
+  /*overflow-y: scroll;*/
 }
