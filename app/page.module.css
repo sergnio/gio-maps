@@ -6,10 +6,16 @@
   min-height: 100vh;
 }
 
-.ul {
+.listContainer {
+  font-size: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  max-height: 90vh;
+
+  @media (max-width: 1200px) {
+    flex-wrap: nowrap;
+  }
 }
 
 .listItem {
@@ -44,20 +50,21 @@
   margin-block: 1em;
 }
 
+.header p {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
 .homeContainer {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  max-width: 64em;
 }
 
 .bannerContainer {
   @media (max-width: 575px) {
     display: none;
   }
-}
-
-.listContainer {
-  /*background: red;*/
 }
 
 .card {

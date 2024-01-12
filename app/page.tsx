@@ -11,9 +11,9 @@ export default async function Home() {
       <div className={styles.bannerContainer}>
         <BannerImage />
       </div>
-      <section className={styles.listContainer}>
+      <section>
         {places.length > 0 ? (
-          <ul>
+          <ul className={styles.listContainer}>
             {places.map(({ id, displayName: { text } }, index) => (
               <Link key={`${id}`} href={DETAILS_PAGE_ROUTE(id)}>
                 <li

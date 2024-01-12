@@ -1,4 +1,8 @@
 .banner {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+
   border-radius: 1em;
   /*  if light mode, then apply filter invert  */
   @media (prefers-color-scheme: light) {

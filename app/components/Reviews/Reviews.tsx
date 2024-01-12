@@ -1,6 +1,7 @@
 import { Review } from "@/app/types/PlaceDetail";
 import Star from "@/app/components/PizzaRating/PizzaStar";
 import styles from "./Reviews.module.css";
+import { formatTimestamp } from "@/app/utils/time";
 
 interface Props {
   reviews: Review[];
@@ -17,7 +18,7 @@ export default ({ reviews }: Props) => (
             <Star filled />
           </span>
         </p>
-        <p>{publishTime}</p>
+        <p className={styles.timestamp}>{formatTimestamp(publishTime)}</p>
         <p>{text.text}</p>
       </div>
     ))}

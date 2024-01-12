@@ -8,6 +8,7 @@ import Placeholder from "@/app/components/GoogleMapEmbed/Placeholder";
 const containerStyle = {
   width: "400px", // Adjust the size as needed
   height: "400px",
+  margin: "1em",
 };
 
 interface Props {
