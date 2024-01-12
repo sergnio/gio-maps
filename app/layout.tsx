@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <header className={styles.header}>
           <Link href={HOME_PAGE_ROUTE}>
-            <p aria-label="Navigate home">home</p>
+            <p aria-label="Navigate home">go home</p>
           </Link>
         </header>
         <main className={styles.main}>{children}</main>

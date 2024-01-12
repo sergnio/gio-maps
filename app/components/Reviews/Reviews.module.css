@@ -15,5 +15,22 @@
 
 .timestamp {
   font-style: italic;
-  padding-block: .25em;
+  padding-block: 0.25em;
+}
+
+.headingContainer {
+  padding-bottom: 0.25em;
+}
+
+.reviewContainer {
+  padding-bottom: 1em;
+  border-bottom: 1px solid hsl(0, 10%, 80%);
+}
+
+.reviewContainer:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.reviewContainer:first-child {
+  padding-top: 1em;
 }

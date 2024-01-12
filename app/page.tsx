@@ -7,11 +7,14 @@ import BannerImage from "@/app/components/Banner/BannerImage";
 export default async function Home() {
   const places = await getPlaces();
   return (
-    <div className={styles.homeContainer}>
-      <div className={styles.bannerContainer}>
-        <BannerImage />
-      </div>
-      <section>
+    <>
+      <h2 className={styles.subtitle}>
+        Pizza places with the closest proximity to Livefront!
+      </h2>
+      <div className={styles.homeContainer}>
+        <div className={styles.bannerContainer}>
+          <BannerImage />
+        </div>
         {places.length > 0 ? (
           <ul className={styles.listContainer}>
             {places.map(({ id, displayName: { text } }, index) => (
@@ -28,7 +31,7 @@ export default async function Home() {
         ) : (
           <p>No places found!</p>
         )}
-      </section>
-    </div>
+      </div>
+    </>
   );
 }

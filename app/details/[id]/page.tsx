@@ -32,7 +32,7 @@ export default async function PlaceDetail({ params: { id } }: Props) {
         />
       </Head>
 
-      <h1>{text}</h1>
+      <h1 className={styles.title}>{text}</h1>
       <div className={styles.contentContainer}>
         <div>
           <div className={styles.ratingContainer}>
