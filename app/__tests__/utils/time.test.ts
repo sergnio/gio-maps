@@ -1,6 +1,4 @@
-// create a jest test that tests if formatTime returns the correct string
-
-import { formatTimestamp } from "../../utils/time";
+import { formatTimestamp } from "@/app/utils/time";
 import { test, expect, describe } from "vitest";
 
 test("formatTimestamp returns the correct string", () => {

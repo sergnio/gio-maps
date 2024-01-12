@@ -1,6 +1,6 @@
 import { Review } from "@/app/types/PlaceDetail";
-import Star from "@/app/components/PizzaRating/PizzaStar";
-import styles from "./Reviews.module.css";
+import PizzaStar from "@/app/components/PizzaRating/PizzaStar";
+import styles from "@/app/components/Reviews/Reviews.module.css";
 import { formatTimestamp } from "@/app/utils/time";
 
 interface Props {
@@ -15,7 +15,7 @@ export default ({ reviews }: Props) => (
           {/*  todo - for each star, have that many pizzas*/}
           <span className={"bold"}>{rating}</span>/5{" "}
           <span className={styles.pizzaRating}>
-            <Star filled />
+            <PizzaStar filled />
           </span>
         </p>
         <p className={styles.timestamp}>{formatTimestamp(publishTime)}</p>
