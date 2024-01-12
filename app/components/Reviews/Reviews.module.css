@@ -12,3 +12,8 @@
 .pizzaRating {
   opacity: 80%;
 }
+
+.timestamp {
+  font-style: italic;
+  padding-block: .25em;
+}
