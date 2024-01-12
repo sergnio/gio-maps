@@ -28,7 +28,7 @@ nvm which
 Congrats! Next is to just install and run the project
 
 ```
-npm i && npm run start
+npm i && npm run dev
 ```
 
 or if you prefer, you can use other package managers like yarn or pnpm
