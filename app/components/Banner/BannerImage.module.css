@@ -1,0 +1,7 @@
+.banner {
+  border-radius: 1em;
+  /*  if light mode, then apply filter invert  */
+  @media (prefers-color-scheme: light) {
+    filter: invert(98%);
+  }
+}

@@ -1,12 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Running for the first time
 
-## Getting Started
+If you do not have nvm installed (node version manager), please install that using the command provided in this link:
+https://github.com/nvm-sh/nvm#install--update-script
 
-First, run the development server:
+**NOTE:** Ensure you're in the project root directory, and replace the XX.XX.XX with whichever node version is declared in the .nvmrc
+
+The command should be similar to this:
+
+```
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/vXX.XX.XX/install.sh | bash
+```
+
+Once NVM has been installed, run these set of commands to ensure you're on the matching
+npm version
+
+```
+cd gio-maps
+nvm use
+nvm install
+nvm alias default node
+nvm exec
+nvm run
+nvm which
+```
+
+Congrats! Next is to just install and run the project
+
+```
+npm i && npm run start
+```
+
+or if you prefer, you can use other package managers like yarn or pnpm
 
 ```bash
-npm run dev
-# or
 yarn dev
 # or
 pnpm dev
@@ -16,11 +42,7 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
+```## Learn More
 
 To learn more about Next.js, take a look at the following resources:
 
@@ -34,3 +56,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
