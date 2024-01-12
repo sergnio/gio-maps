@@ -34,7 +34,3 @@
 .reviewContainer:first-child {
   padding-top: 1em;
 }
-
-.reviewText {
-  max-width: 75ch;
-}

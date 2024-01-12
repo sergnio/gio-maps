@@ -7,20 +7,14 @@
 }
 
 .listContainer {
+  width: 100%;
   font-size: 2rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 95% !important;
   max-height: 90vh;
   box-sizing: border-box;
-
-  @media (max-width: 1024px) {
-    flex-wrap: nowrap;
-  }
-}
-
-.listContainer > * { /* Adjust for direct children of the container */
-  flex: 1 1 auto; /* flex-grow, flex-shrink, flex-basis */
 }
 
 .listItem {
@@ -31,7 +25,7 @@
   padding: 0.5em 2em 0.5em 0.5em;
   border-radius: 1em;
   overflow-wrap: break-word;
-  max-width: 12em;
+  min-width: 10em;
 }
 
 .listItem:hover::after,
@@ -67,6 +61,7 @@
 .homeContainer {
   display: flex;
   flex-direction: row;
+  width: 100%;
   max-width: 85em;
 }
 

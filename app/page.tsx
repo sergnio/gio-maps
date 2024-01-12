@@ -11,24 +11,22 @@ export default async function Home() {
       <div className={styles.bannerContainer}>
         <BannerImage />
       </div>
-      <section>
-        {places.length > 0 ? (
-          <ul className={styles.listContainer}>
-            {places.map(({ id, displayName: { text } }, index) => (
-              <Link key={`${id}`} href={DETAILS_PAGE_ROUTE(id)}>
-                <li
-                  className={styles.listItem}
-                  aria-label={`See details for ${text}`}
-                >
-                  {text}
-                </li>
-              </Link>
-            ))}
-          </ul>
-        ) : (
-          <p>No places found!</p>
-        )}
-      </section>
+      {places.length > 0 ? (
+        <ul className={styles.listContainer}>
+          {places.map(({ id, displayName: { text } }, index) => (
+            <Link key={`${id}`} href={DETAILS_PAGE_ROUTE(id)}>
+              <li
+                className={styles.listItem}
+                aria-label={`See details for ${text}`}
+              >
+                {text}
+              </li>
+            </Link>
+          ))}
+        </ul>
+      ) : (
+        <p>No places found!</p>
+      )}
     </div>
   );
 }

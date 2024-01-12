@@ -2,6 +2,7 @@ import { Review } from "@/app/types/PlaceDetail";
 import PizzaStar from "@/app/components/PizzaRating/PizzaStar";
 import styles from "@/app/components/Reviews/Reviews.module.css";
 import { formatTimestamp } from "@/app/utils/time";
+import ReadMore from "@/app/components/ReadMore/ReadMore";
 
 interface Props {
   reviews: Review[];
@@ -21,7 +22,8 @@ export default ({ reviews }: Props) => (
             {formatTimestamp(publishTime)}
           </span>
         </p>
-        <p className={styles.reviewText}>{text.text}</p>
+        {/*<p className={styles.reviewText}>{text.text}</p>*/}
+        <ReadMore text={text.text} />
       </div>
     ))}
   </>
