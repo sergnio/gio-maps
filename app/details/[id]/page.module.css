@@ -26,6 +26,11 @@
   /*    there will be only two components, they should be side by side if*/
   display: flex;
   flex-direction: row;
+
+}
+
+.contentContainer > * {
+  padding-block: 0.5em;
 }
 
 .reviewContainer {
