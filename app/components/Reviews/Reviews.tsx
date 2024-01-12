@@ -21,7 +21,7 @@ export default ({ reviews }: Props) => (
             {formatTimestamp(publishTime)}
           </span>
         </p>
-        <p>{text.text}</p>
+        <p className={styles.reviewText}>{text.text}</p>
       </div>
     ))}
   </>

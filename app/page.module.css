@@ -1,7 +1,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   padding: 3rem;
   min-height: 100vh;
 }
@@ -12,10 +12,15 @@
   flex-direction: column;
   flex-wrap: wrap;
   max-height: 90vh;
+  box-sizing: border-box;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1024px) {
     flex-wrap: nowrap;
   }
+}
+
+.listContainer > * { /* Adjust for direct children of the container */
+  flex: 1 1 auto; /* flex-grow, flex-shrink, flex-basis */
 }
 
 .listItem {
@@ -25,6 +30,8 @@
   /* Give a bit of padding for the arrow at the end of the element */
   padding: 0.5em 2em 0.5em 0.5em;
   border-radius: 1em;
+  overflow-wrap: break-word;
+  max-width: 12em;
 }
 
 .listItem:hover::after,
@@ -32,6 +39,8 @@
   content: "→";
   position: absolute;
   right: 0.5em;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .listItem:hover,
@@ -58,7 +67,7 @@
 .homeContainer {
   display: flex;
   flex-direction: row;
-  max-width: 64em;
+  max-width: 85em;
 }
 
 .bannerContainer {
