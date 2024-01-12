@@ -6,12 +6,12 @@
 }
 
 .ratingText {
-    color: hsl(0, 0%, 25%);
+    color: hsl(0, 0%, 95%);
     font-weight: bold;
 }
 
 .ratingCount {
-    color: hsl(0, 0%, 50%);
+    color: hsl(0, 0%, 80%);
 }
 
 .contentContainer {

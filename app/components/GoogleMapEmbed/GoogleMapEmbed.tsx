@@ -2,6 +2,7 @@
 
 import { GoogleMap, MarkerF, useJsApiLoader } from "@react-google-maps/api";
 import { Location } from "@/app/types/PlaceDetail";
+import Placeholder from "@/app/components/GoogleMapEmbed/Placeholder";
 
 // Define map container style
 const containerStyle = {
@@ -27,7 +28,7 @@ export default ({ location: { latitude, longitude } }: Props) => {
   return (
     <>
       {!isLoaded ? (
-        <p>loading...</p>
+        <Placeholder containerStyle={containerStyle} />
       ) : (
         <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={15}>
           <MarkerF position={center} />

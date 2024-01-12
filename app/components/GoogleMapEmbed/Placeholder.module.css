@@ -1,0 +1,31 @@
+/*create an animation that pulses the text*/
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #bdbdbd;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  animation: pulse 2s infinite;
+}
+/*pulse*/
+@keyframes pulse {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+      opacity: 50%;
+  }
+  100% {
+      opacity: 100%;
+
+  }
+}
