@@ -4,7 +4,6 @@ import "./globals.css";
 import styles from "@/app/page.module.css";
 import Link from "next/link";
 import { HOME_PAGE_ROUTE } from "@/app/clientRoutes";
-import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <header className={styles.header}>
           <Link href={HOME_PAGE_ROUTE}>
-            <h1 aria-label="GioMaps, navigate home">GioMaps</h1>
+            <p aria-label="Navigate home">home</p>
           </Link>
         </header>
         <main className={styles.main}>{children}</main>
