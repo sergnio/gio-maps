@@ -32,7 +32,8 @@
 .listItem:focus {
   /*add transition*/
   transition: all 0.2s ease-in-out;
-  background-color: hsl(0, 0%, 14%); /* Highlight color on hover/focus */
+  background-color: var(--hover-bg-hsl); /* Highlight color on hover/focus */
+  color: var(--hover-text-hsl);
   outline: none; /* Remove default focus outline */
 }
 
