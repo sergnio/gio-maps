@@ -9,8 +9,7 @@ export default defineConfig({
     environment: "jsdom",
   },
   resolve: {
-    alias: {
-      "@": resolve(__dirname, "./app"), // Adjust the path as necessary
-    },
+    alias: [{ find: "@", replacement: resolve(__dirname, "./app") }],
   },
+  base: "/",
 });
