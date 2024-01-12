@@ -1,6 +1,6 @@
 import { Review } from "@/app/types/PlaceDetail";
 import PizzaStar from "@/app/components/PizzaRating/PizzaStar";
-import styles from "./Reviews.module.css";
+import styles from "@/app/components/Reviews/Reviews.module.css";
 import { formatTimestamp } from "@/app/utils/time";
 
 interface Props {

@@ -5,7 +5,7 @@
 #  pull_request:
 #    branches: [main]
 #jobs:
-#  run-e2e-tests:
+#  run-e2e-e2e-tests:
 #    timeout-minutes: 10
 #    runs-on: ubuntu-latest
 #    steps:
@@ -17,7 +17,7 @@
 #        run: npm ci
 #      - name: Install Playwright Browsers
 #        run: npx playwright install --with-deps
-#      - name: Run Playwright tests
+#      - name: Run Playwright e2e-tests
 #        run: npx playwright test
 #        env:
 #          BASE_URL: ${{ github.event.deployment_status.environment_url }}
