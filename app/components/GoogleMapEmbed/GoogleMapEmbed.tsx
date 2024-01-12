@@ -13,8 +13,6 @@ interface Props {
   location: Location;
 }
 
-// I personally like anonymous functions when the component is small and the file is named after the component!
-// eslint-disable-next-line import/no-anonymous-default-export, react/display-name
 export default ({ location: { latitude, longitude } }: Props) => {
   const googleMapsApiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!;
   const { isLoaded } = useJsApiLoader({

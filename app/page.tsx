@@ -2,10 +2,11 @@ import Link from "next/link";
 import styles from "@/app/page.module.css";
 import { DETAILS_PAGE_ROUTE } from "@/app/clientRoutes";
 import { getPlaces } from "@/app/lib/getPlaces";
+import Image from "next/image";
+import PizzaBanner from "public/static/images/pizza.webp";
 
 export default async function Home() {
   const places = await getPlaces();
-
   return (
     <>
       {places.length > 0 ? (

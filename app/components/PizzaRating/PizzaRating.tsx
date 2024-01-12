@@ -6,8 +6,6 @@ interface Props {
   rating: number;
 }
 
-// I personally like anonymous functions when the component is small and the file is named after the component!
-// eslint-disable-next-line import/no-anonymous-default-export, react/display-name
 export default ({ rating }: Props) => {
   const totalStars = 5;
   let stars: ReactElement[] = [];

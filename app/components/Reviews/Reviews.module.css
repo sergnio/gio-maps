@@ -8,3 +8,7 @@
   border-radius: 5px;
   background-color: hsl(0, 0%, 95%);
 }
+
+.pizzaRating {
+  opacity: 80%;
+}
