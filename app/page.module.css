@@ -32,7 +32,7 @@
 .listItem:focus {
   /*add transition*/
   transition: all 0.2s ease-in-out;
-  background-color: hsl(0, 0%, 94%); /* Highlight color on hover/focus */
+  background-color: hsl(0, 0%, 14%); /* Highlight color on hover/focus */
   outline: none; /* Remove default focus outline */
 }
 
@@ -50,15 +50,13 @@
 }
 
 .bannerContainer {
-  background: blue;
-
   @media (max-width: 575px) {
     display: none;
   }
 }
 
 .listContainer {
-  background: red;
+  /*background: red;*/
 }
 
 .card {
