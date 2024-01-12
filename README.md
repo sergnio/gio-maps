@@ -25,7 +25,11 @@ nvm run
 nvm which
 ```
 
-Congrats! Next is to just install and run the project
+Congrats! Now we simply need to add a `.env` file with the API keys, install, and run the project
+
+Copy the `.env.local` file from the email sent from sergio. This can go in your root directory, next to your `package.json`, `app folder`, etc.
+
+And simply run this next command to install the dependencies and run the project in dev mode.
 
 ```
 npm i && npm run dev
