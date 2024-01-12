@@ -10,15 +10,17 @@ interface Props {
 export default ({ reviews }: Props) => (
   <>
     {reviews.map(({ name, rating, publishTime, originalText, text }) => (
-      <div key={`${name}-${publishTime}`}>
-        <p>
+      <div key={`${name}-${publishTime}`} className={styles.reviewContainer}>
+        <p className={styles.headingContainer}>
           {/*  todo - for each star, have that many pizzas*/}
           <span className={"bold"}>{rating}</span>/5{" "}
           <span className={styles.pizzaRating}>
             <PizzaStar filled />
           </span>
+          <span className={styles.timestamp}>
+            {formatTimestamp(publishTime)}
+          </span>
         </p>
-        <p className={styles.timestamp}>{formatTimestamp(publishTime)}</p>
         <p>{text.text}</p>
       </div>
     ))}
