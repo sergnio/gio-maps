@@ -25,7 +25,9 @@ nvm run
 nvm which
 ```
 
-Congrats! Now we simply need to add a `.env` file with the API keys, install, and run the project
+Congrats! Now we simply need to add a `.env` file with the API keys, install, and run the project.
+
+**IMPORTANT!** 
 
 Copy the `.env.local` file from the email sent from sergio. This can go in your root directory, next to your `package.json`, `app folder`, etc.
 
