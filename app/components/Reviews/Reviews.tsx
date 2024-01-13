@@ -25,7 +25,6 @@ export default ({ reviews }: Props) => (
             className={styles.reviewContainer}
           >
             <p className={styles.headingContainer}>
-              {/*  todo - for each star, have that many pizzas*/}
               <span className={"bold"}>{rating}</span>/5{" "}
               <span className={styles.pizzaRating}>
                 <PizzaStar filled />
