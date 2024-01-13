@@ -26,14 +26,18 @@
   color: hsl(0, 0%, 25%);
 }
 
-.contentContainer {
+.pageContentContainer {
   /*    there will be only two components, they should be side by side if*/
   display: flex;
   flex-direction: row;
 }
 
-.contentContainer > * {
+.pageContentContainer > * {
   padding-block: 0.5em;
+}
+
+.mapContentContainer > * {
+  padding: .5em 1em;
 }
 
 .reviewContainer {
