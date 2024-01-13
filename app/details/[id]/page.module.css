@@ -37,7 +37,12 @@
 }
 
 .mapContentContainer > * {
-  padding: .5em 1em;
+  padding: 0.5em 1em;
+}
+
+.websiteUri {
+  text-decoration: underline;
+  color: blue;
 }
 
 .reviewContainer {

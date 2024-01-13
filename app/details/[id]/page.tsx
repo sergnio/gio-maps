@@ -45,7 +45,14 @@ export default async function PlaceDetail({ params: { id } }: Props) {
           <h3 aria-label={`Address: ${formattedAddress}`}>
             {formattedAddress}
           </h3>
-          <a href={websiteUri}>{websiteUri}</a>
+          <a
+            href={websiteUri}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.websiteUri}
+          >
+            {websiteUri}
+          </a>
         </div>
         <div>
           <div>
