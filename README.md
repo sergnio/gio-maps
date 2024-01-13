@@ -63,6 +63,7 @@ npm run playwright
 1. The app is fully responsive, and works on mobile, tablet, and desktop, and on most browsers of your choice!
 2. This is my biggest project using NextJS, and I'm quite happy with how it turned out.
 3. Only 1 third party package, being the Google Maps React component. Everything else is homegrown!
+4. Hosted! Visit https://gio-maps.vercel.app/ to see the app in action.
 
 # Known Issues / Future Improvements
 Feel free to check out the issues tab for any known issues. Otherwise, the main known issues are as follows:
