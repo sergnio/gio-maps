@@ -71,7 +71,8 @@ Feel free to check out the issues tab for any known issues. Otherwise, the main 
    3. An easy way would be to use the browser's language settings, having a separate strings file to pull the strings from
    4. A more complex way would be to have a dropdown to select the language, and persist that data in a database
 3. Fix the CI/CD pipeline for tests. I haven't used Playwright before and spent a small amount of time to get them running on Github Actions, but since it's out of scope I opted to not spend too much time on it.
-4. Preload all the details routes. I'm used to React Query's preloading, but didn't prioritize it over some other features since the details page loads quite fast as is. 
+4. Preload all the details routes. I'm used to React Query's preloading, but didn't prioritize it over some other features since the details page loads quite fast as is.
+5. A test to check if the map properly loaded. I think I need to pass the API keys to the test environment!
 4. The ability to search for various locations or resturants. The theme was pizza restaurants around Livefront, but this could be expanded to whatever with a search bar.
 3. Driving / walking directions to the restaurant with one click of a button
 4. Pagination on the search results to have a more expansive list of restaurants
