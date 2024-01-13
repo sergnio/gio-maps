@@ -70,7 +70,8 @@ Feel free to check out the issues tab for any known issues. Otherwise, the main 
 2. Localization! Ability to change the language of the app.
    3. An easy way would be to use the browser's language settings, having a separate strings file to pull the strings from
    4. A more complex way would be to have a dropdown to select the language, and persist that data in a database
-3. The ability to search for various locations or resturants. The theme was pizza restaurants around Livefront, but this could be expanded to whatever with a search bar.
+3. Fix the CI/CD pipeline for tests. I haven't used Playwright before and spent a small amount of time to get them running on Github Actions, but since it's out of scope I opted to not spend too much time on it.
+4. The ability to search for various locations or resturants. The theme was pizza restaurants around Livefront, but this could be expanded to whatever with a search bar.
 3. Driving / walking directions to the restaurant with one click of a button
 4. Pagination on the search results to have a more expansive list of restaurants
 5. "Endless scrolling" on the reviews to have a more expansive list of reviews
