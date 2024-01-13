@@ -45,6 +45,12 @@
   color: blue;
 }
 
+.address {
+  font-style: italic;
+  font-weight: bold;
+  max-width: 18em;
+}
+
 .reviewContainer {
   /*max-height: 50vh;*/
   /*overflow-y: scroll;*/

@@ -42,9 +42,12 @@ export default async function PlaceDetail({ params: { id } }: Props) {
             <p className={styles.ratingCount}>({userRatingCount})</p>
           </div>
           <GoogleMapEmbed location={location} />
-          <h3 aria-label={`Address: ${formattedAddress}`}>
+          <p
+            className={styles.address}
+            aria-label={`Address: ${formattedAddress}`}
+          >
             {formattedAddress}
-          </h3>
+          </p>
           <a
             href={websiteUri}
             target="_blank"
