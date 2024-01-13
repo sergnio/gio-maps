@@ -72,6 +72,7 @@ Feel free to check out the issues tab for any known issues. Otherwise, the main 
    3. A carousel of images for the restaurants
    4. Images for the reviews
    5. Etc.
+6. Add code coverage indicator. I know 80% coverage is important. I'm confident I have hit that metric, but it'd be nice for future development to continue to see where the coverage is at.
 2. Localization! Ability to change the language of the app.
    3. An easy way would be to use the browser's language settings, having a separate strings file to pull the strings from
    4. A more complex way would be to have a dropdown to select the language, and persist that data in a database
