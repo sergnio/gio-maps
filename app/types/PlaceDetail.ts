@@ -10,6 +10,7 @@ export type PlaceDetail = {
   userRatingCount: number;
   reviews: Review[];
   displayName: TextWithLanguage;
+  websiteUri: string;
 };
 
 export type Location = {

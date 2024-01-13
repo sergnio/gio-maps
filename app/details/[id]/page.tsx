@@ -20,6 +20,7 @@ export default async function PlaceDetail({ params: { id } }: Props) {
     formattedAddress,
     reviews,
     location,
+    websiteUri,
   } = await getPlace({ placeId: id });
 
   return (
@@ -33,18 +34,28 @@ export default async function PlaceDetail({ params: { id } }: Props) {
       </Head>
 
       <h1 className={styles.title}>{text}</h1>
-      <div className={styles.contentContainer}>
-        <div>
+      <div className={styles.pageContentContainer}>
+        <div className={styles.mapContentContainer}>
           <div className={styles.ratingContainer}>
             <p className={styles.ratingText}>{rating}</p>
             <StarRating rating={rating} />
             <p className={styles.ratingCount}>({userRatingCount})</p>
           </div>
           <GoogleMapEmbed location={location} />
-          <h3 aria-label={`Address: ${formattedAddress}`}>
+          <p
+            className={styles.address}
+            aria-label={`Address: ${formattedAddress}`}
+          >
             {formattedAddress}
-          </h3>
-          <p>link to website</p>
+          </p>
+          <a
+            href={websiteUri}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.websiteUri}
+          >
+            {websiteUri}
+          </a>
         </div>
         <div>
           <div>
