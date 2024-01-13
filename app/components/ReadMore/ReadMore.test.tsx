@@ -1,7 +1,9 @@
 import { expect, describe, test, afterEach } from "vitest";
 
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen, fireEvent, cleanup } from "@testing-library/react";
 import ReadMore from "./ReadMore"; // Adjust the import path as necessary
+
+afterEach(cleanup);
 
 describe("ReadMore Component tests", () => {
   const shortText = "Short text example.";

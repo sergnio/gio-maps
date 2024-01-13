@@ -28,8 +28,6 @@ const fetchWrapper = async <T>(
     ...(payload && { body: JSON.stringify(payload) }),
   };
 
-  console.log("options: ", options);
-
   try {
     const response = await fetch(url, options);
     return response.json();
