@@ -9,9 +9,7 @@ export default async function Home() {
   const places = await getPlaces();
   return (
     <>
-      <h2 className={styles.subtitle}>
-        Pizza places with the closest proximity to Livefront!
-      </h2>
+      <h2 className={styles.subtitle}>Pizza in proximity to Livefront!</h2>
       <div className={styles.homeContainer}>
         <div className={styles.bannerContainer}>
           <BannerImage />
