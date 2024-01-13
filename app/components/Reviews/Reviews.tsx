@@ -10,29 +10,36 @@ interface Props {
 
 export default ({ reviews }: Props) => (
   <>
-    {reviews.map(
-      ({
-        name,
-        rating,
-        publishTime,
-        text,
-        authorAttribution: { displayName },
-      }) => (
-        <div key={`${name}-${publishTime}`} className={styles.reviewContainer}>
-          <p className={styles.headingContainer}>
-            {/*  todo - for each star, have that many pizzas*/}
-            <span className={"bold"}>{rating}</span>/5{" "}
-            <span className={styles.pizzaRating}>
-              <PizzaStar filled />
-            </span>
-            <span className={styles.timestamp}>
-              {displayName}, {formatTimestamp(publishTime)}
-            </span>
-          </p>
-          {/*<p className={styles.reviewText}>{text.text}</p>*/}
-          <ReadMore text={text.text} />
-        </div>
-      ),
+    {reviews.length > 0 ? (
+      reviews.map(
+        ({
+          name,
+          rating,
+          publishTime,
+          text,
+          authorAttribution: { displayName },
+        }) => (
+          <div
+            key={`${name}-${publishTime}`}
+            data-testid="review-item"
+            className={styles.reviewContainer}
+          >
+            <p className={styles.headingContainer}>
+              <span className={"bold"}>{rating}</span>/5{" "}
+              <span className={styles.pizzaRating}>
+                <PizzaStar filled />
+              </span>
+              <span className={styles.timestamp}>
+                {displayName}, {formatTimestamp(publishTime)}
+              </span>
+            </p>
+            {/*<p className={styles.reviewText}>{text.text}</p>*/}
+            <ReadMore text={text.text} />
+          </div>
+        ),
+      )
+    ) : (
+      <p>No reviews found!</p>
     )}
   </>
 );

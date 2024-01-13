@@ -47,18 +47,36 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```## Learn More
+# Running tests
+After installing the dependencies, you can run the tests with the following command:
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 ```
+npm run test
+```
+
+To run E2E tests using Playwright, run the following command:
+
+```
+npm run playwright
+```
+
+# Known Issues / Future Improvements
+Feel free to check out the issues tab for any known issues. Otherwise, the main known issues are as follows:
+1. It's quite a simple design. Nothing too fancy, it has two pages. The design could be improved, such as:
+   2. A more varied color scheme
+   3. A carousel of images for the restaurants
+   4. Images for the reviews
+   5. Etc.
+2. Localization! Ability to change the language of the app.
+   3. An easy way would be to use the browser's language settings, having a separate strings file to pull the strings from
+   4. A more complex way would be to have a dropdown to select the language, and persist that data in a database
+3. Fix the CI/CD pipeline for tests. I haven't used Playwright before and spent a small amount of time to get them running on Github Actions, but since it's out of scope I opted to not spend too much time on it.
+4. Preload all the details routes. I'm used to React Query's preloading, but didn't prioritize it over some other features since the details page loads quite fast as is.
+5. A test to check if the map properly loaded. I think I need to pass the API keys to the test environment!
+4. The ability to search for various locations or resturants. The theme was pizza restaurants around Livefront, but this could be expanded to whatever with a search bar.
+3. Driving / walking directions to the restaurant with one click of a button
+4. Pagination on the search results to have a more expansive list of restaurants
+5. "Endless scrolling" on the reviews to have a more expansive list of reviews
+6. The ability to leave a review (although this would require the user to leave genuine reviews since I'm extending the actual google maps API :) )
+7. A way to save your favorite restaurants, which would require...
+8. A sign in / sign up page, persisting user data
