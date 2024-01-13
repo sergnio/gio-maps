@@ -18,7 +18,6 @@ export const getPlace = async ({ placeId }: Props): Promise<PlaceDetail> => {
           "id,photos,displayName,location,rating,userRatingCount,formattedAddress,reviews,websiteUri",
       },
     });
-    // console.log("detailResponse: ", JSON.stringify(detailResponse, null, 4));
     return detailResponse;
   } catch (e) {
     console.error(JSON.stringify(e));
