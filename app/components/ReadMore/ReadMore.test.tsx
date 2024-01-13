@@ -3,7 +3,7 @@ import { expect, describe, test, afterEach } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
 import ReadMore from "./ReadMore"; // Adjust the import path as necessary
 
-describe("ReadMore Component", () => {
+describe("ReadMore Component tests", () => {
   const shortText = "Short text example.";
   const longText = "Long text ".repeat(400); // Ensure this is longer than MAX_CHARS
   const ellipsesRegex = /\.\.\./;
