@@ -32,7 +32,6 @@ export default async function PlaceDetail({ params: { id } }: Props) {
           content={`Find out more about ${text}, a top-rated pizza place.`}
         />
       </Head>
-
       <h1 className={styles.title}>{text}</h1>
       <div className={styles.pageContentContainer}>
         <div className={styles.mapContentContainer}>
