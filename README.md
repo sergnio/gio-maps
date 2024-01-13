@@ -54,7 +54,7 @@ After installing the dependencies, you can run the tests with the following comm
 npm run test
 ```
 
-To run E2E tests using Playwright, run the following command:
+To run E2E tests using Playwright (which runs tests on chromium, firefox, and website) please run the following command:
 
 ```
 npm run playwright
