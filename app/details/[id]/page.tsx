@@ -3,12 +3,33 @@ import { getPlace } from "@/app/lib/getPlace";
 import styles from "./page.module.css";
 import Reviews from "@/app/components/Reviews/Reviews";
 import GoogleMapEmbed from "@/app/components/GoogleMapEmbed/GoogleMapEmbed";
-import type { Metadata } from "next";
+import type { Metadata, ResolvingMetadata } from "next";
 import Head from "next/head";
 
 interface Props {
   params: {
     id: string;
+  };
+}
+
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
+  // Fetch place details
+  const placeDetails = await getPlace({ placeId: params.id });
+
+  // Destructure the required field from the place details
+  const {
+    displayName: { text },
+  } = placeDetails;
+
+  // Optionally access and extend parent metadata
+  const previousImages = (await parent).openGraph?.images || [];
+
+  return {
+    title: `${text} - Pizza Finder`,
+    description: `Find out more about ${text}, a top-rated pizza place.`,
   };
 }
 
