@@ -27,9 +27,12 @@
 }
 
 .pageContentContainer {
-  /*    there will be only two components, they should be side by side if*/
   display: flex;
   flex-direction: row;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .pageContentContainer > * {
